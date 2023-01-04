@@ -1,0 +1,36 @@
+{
+  "name": "express-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "app/models",
+    "@controllers": "app/controllers",
+    "@routes": "app/routes",
+    "@database": "database",
+    "@validators": "app/validators",
+    "@services": "app/services"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "gravatar": "^1.8.2",
+    "jalali-moment": "^3.3.11",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

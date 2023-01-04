@@ -1,0 +1,21 @@
+.box-head.has-operation {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.button {
+    color: white !important;
+}
+
+.commenter {
+    display: flex;
+}
+
+.commnet-operations {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.comment-row:hover .comment-operations {
+    opacity: 1;
+}

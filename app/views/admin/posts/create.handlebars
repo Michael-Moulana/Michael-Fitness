@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="co-md-12 col-lg-12 mb-30">
+        <div class="box">
+            <div class="box-head">
+                <h4 class="title">ایجاد مطلب جدید</h4>
+            </div>
+            <div class="box-body">
+                <div class="row mbn-20">
+
+                    <!-- form field -->
+                    <form action="/admin/posts/store" method="POST">
+                        <div class="col-lg-6 col-12 mb-20">
+                            {{#if hasError }}
+                            <div class="alert alert-outline-secondary" role="alert">
+                                <p>خطا!</p>
+                                {{#each errors}} 
+                                <p>{{this}}</p>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+
+                            <div class="row mbn-15">
+                                <div class="col-12 mb-30">
+                                    <input name="title" type="text" class="form-control" placeholder="عنوان مطلب">
+                                </div>
+                                <div class="col-12 mb-30">
+                                    <input name="slug" type="text" class="form-control" placeholder="نامک مطلب">
+                                </div>
+                                <div class="col-12 mb-30">
+                                    <textarea name="content" class="form-control" placeholder="محتوای مطلب"></textarea>
+                                </div>
+                                <div class="col-12 mb-30">
+                                    <select name="author" class="form-control">
+                                        {{#each users}}
+                                        <option value="{{this.id}}">{{this.full_name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-30">
+
+                                    <h6 class="mb-15">وضعیت مطلب</h6>
+
+                                    <label><input type="radio" name="status" value="0" checked>پیش نویس</label>
+                                    <label><input type="radio" name="status" value="1">منتشر شده</label>
+                                    <label><input type="radio" name="status" value="2">در حال بازبینی</label>
+
+                                </div>
+                                <div class="col-12 mb-30">
+                                    <button type="submit" class="button button-primary"><span>ذخیره سازی</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- form field -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
